@@ -2,20 +2,9 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
+#include "config_common.h"
 
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
-
-#define RGBLIGHT_LIMIT_VAL 255
-#define RGBLIGHT_DEFAULT_VAL ( RGBLIGHT_LIMIT_VAL / 3 )
-#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_MOOD
-#define RGBLIGHT_SLEEP
-
+// Bootmagic Lite key configuration
+// Not yet supported in info.json ?
 #define BOOTMAGIC_LITE_ROW 2
-#define BOOTMAGIC_LITE_COLUMN 0
-
-// reduce memory
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
-#define NO_ACTION_ONESHOT
-#define LAYER_STATE_8BIT
+#define BOOTMAGIC_LITE_COLUMN 2
