@@ -1,4 +1,5 @@
-/* Copyright 2019 Nick Brassel (tzarc)
+/*
+ * Copyright 2022
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +17,36 @@
 
 #pragma once
 
-#include "eeprom.h"
+#include <stdint.h>
+#include "report.h"
 
-uint16_t eeprom_driver_init(void);
-void eeprom_driver_erase(void);
+/**
+ * \brief Initialize the Bluetooth system.
+ */
+void bluetooth_init(void);
+
+/**
+ * \brief Perform housekeeping tasks.
+ */
+void bluetooth_task(void);
+
+/**
+ * \brief Send a keyboard report.
+ *
+ * \param report The keyboard report to send.
+ */
+void bluetooth_send_keyboard(report_keyboard_t *report);
+
+/**
+ * \brief Send a mouse report.
+ *
+ * \param report The mouse report to send.
+ */
+void bluetooth_send_mouse(report_mouse_t *report);
+
+/**
+ * \brief Send a consumer usage.
+ *
+ * \param usage The consumer usage to send.
+ */
+void bluetooth_send_consumer(uint16_t usage);
