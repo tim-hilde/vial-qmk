@@ -107,8 +107,8 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                             rgb_matrix_set_color(index, RGB_BLUE);
                             break;
                         case WIN_FN:
-                            if (keycode <= KC_1 && keycode >= KC_0 && keycode == KC_MINS && keycode == KC_EQL) {
-                                rgb_matrix_set_color(index, RGB_RED);
+                            for (int i = 0; i < ARRAYSIZE(multimedia_f_row); i++) {
+                                rgb_matrix_set_color(multimedia_f_row[i], RGB_RED);
                             }
                             rgb_matrix_set_color(index, RGB_YELLOW);
                             break;
