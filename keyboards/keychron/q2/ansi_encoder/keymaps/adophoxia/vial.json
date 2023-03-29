@@ -4,6 +4,24 @@
   "productId": "0x0111",
   "lighting": "vialrgb",
   "matrix": {"rows": 5, "cols": 15},
+  "customKeycodes": [
+    {"name": "Win Lock",
+     "title": "Win Key Lock",
+     "shortName": "KC_WLCK"
+    },
+    {"name": "Enc Left",
+     "title": "Encoder Left",
+     "shortname": "ENC_LFT"
+    },
+    {"name": "Enc Right",
+     "title": "Encoder Right",
+     "shortName": "ENC_RGT"
+    },
+    {"name": "Enc Press",
+     "title": "Encoder Press",
+     "shortname": "ENC_PRS"
+    }
+  ],
   "layouts": {
     "keymap": [
       [
