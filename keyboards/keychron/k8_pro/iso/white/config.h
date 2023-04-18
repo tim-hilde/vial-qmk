@@ -20,10 +20,10 @@
 /* LED matrix driver configuration */
 #    define DRIVER_COUNT 1
 #    define DRIVER_ADDR_1 0b1110100
-#    define LED_MATRIX_LED_COUNT 88
+#    define DRIVER_LED_TOTAL 88
 
 /* Set to infinit, which is use in USB mode by default */
-#    define LED_MATRIX_TIMEOUT LED_MATRIX_TIMEOUT_INFINITE
+#    define LED_DISABLE_TIMEOUT LED_MATRIX_TIMEOUT_INFINITE
 /* Allow shutdown of led driver to save power */
 #    define LED_MATRIX_DRIVER_SHUTDOWN_ENABLE
 /* Turn off backlight on low brightness to save power */
