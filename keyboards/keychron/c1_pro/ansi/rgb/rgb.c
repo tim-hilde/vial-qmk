@@ -18,7 +18,7 @@
 
 // clang-format off
 #ifdef RGB_MATRIX_ENABLE
-const ckled2001_led PROGMEM g_ckled2001_leds[RGB_MATRIX_LED_COUNT] = {
+const ckled2001_led PROGMEM g_ckled2001_leds[DRIVER_LED_TOTAL] = {
 /* Refer to CKLED2001 manual for these locations
  *   driver
  *   |  R location
@@ -149,10 +149,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
-    if (!rgb_matrix_indicators_advanced_user(led_min, led_max)) {
-        return false;
-    }
+void rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     if ((host_keyboard_led_state().caps_lock) && (default_layer_state == (1 << 0))) {
         rgb_matrix_set_color(CAPS_MAC_WIN_LED_INDEX, 0, 255, 255);
     } else if ((!host_keyboard_led_state().caps_lock) && (default_layer_state == (1 << 0))) {
@@ -162,7 +159,6 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     } else if ((!host_keyboard_led_state().caps_lock) && (default_layer_state == (1 << 2))) {
         rgb_matrix_set_color(CAPS_MAC_WIN_LED_INDEX, 255, 0, 0);
     }
-    return true;
 }
 
 #endif

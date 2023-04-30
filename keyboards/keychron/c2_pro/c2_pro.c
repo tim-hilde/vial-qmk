@@ -102,10 +102,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-bool LED_MATRIX_INDICATORS_KB(void) {
-    if (!LED_MATRIX_INDICATORS_USER()) {
-        return false;
-    }
+void LED_MATRIX_INDICATORS_KB(void) {
     if (host_keyboard_led_state().caps_lock) {
         LED_MATRIX_SET_COLOR(CAPS_LED_INDEX, COLOR_WHITE);
     } else {
@@ -126,7 +123,6 @@ bool LED_MATRIX_INDICATORS_KB(void) {
     } else {
         LED_MATRIX_SET_COLOR(WIN_LED_INDEX, COLOR_BLACK);
     }
-    return true;
 }
 
 #endif

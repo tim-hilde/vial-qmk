@@ -25,7 +25,7 @@
 
 /* RGB Matrix Configuration */
 #define DRIVER_1_LED_TOTAL 90
-#define LED_MATRIX_LED_COUNT DRIVER_1_LED_TOTAL
+#define DRIVER_LED_TOTAL DRIVER_1_LED_TOTAL
 
 /* Scan phase of led driver set as MSKPHASE_9CHANNEL(defined as 0x03 in CKLED2001.h) */
 #define PHASE_CHANNEL MSKPHASE_9CHANNEL

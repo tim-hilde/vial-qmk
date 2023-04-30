@@ -26,7 +26,7 @@
 
 /* RGB Matrix Configuration */
 #define DRIVER_1_LED_TOTAL 108
-#define LED_MATRIX_LED_COUNT DRIVER_1_LED_TOTAL
+#define DRIVER_LED_TOTAL DRIVER_1_LED_TOTAL
 
 /* Enable indicator LED*/
 #define NUM_LED_INDEX 16
