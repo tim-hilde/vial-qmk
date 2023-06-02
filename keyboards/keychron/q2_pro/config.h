@@ -87,9 +87,8 @@
 #endif
 
 /* Emulated EEPROM configuration */
-#define WEAR_LEVELING_LOGICAL_SIZE 2048
-#define WEAR_LEVELING_BACKING_SIZE (WEAR_LEVELING_LOGICAL_SIZE * 2)
+#define FEE_DENSITY_BYTES FEE_PAGE_SIZE
+#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
 
 /* Factory test keys */
-#define FN_KEY1 MO(2)
-#define FN_KEY2 MO(3)
+#define FN_KEY2 MO(4)

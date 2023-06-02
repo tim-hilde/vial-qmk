@@ -92,8 +92,8 @@
 #define ENCODER_DEFAULT_POS 0x3
 
 /* Emulated EEPROM configuration */
-#define WEAR_LEVELING_LOGICAL_SIZE 2048
-#define WEAR_LEVELING_BACKING_SIZE (WEAR_LEVELING_LOGICAL_SIZE * 2)
+#define FEE_DENSITY_BYTES FEE_PAGE_SIZE
+#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
 
 /* Specifed (0,1) which programmed as "ESC" key on this keyboard as bootmagic key */
 #define BOOTMAGIC_LITE_ROW 0

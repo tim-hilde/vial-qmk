@@ -85,14 +85,6 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(mac_keycode[keycode - KC_LOPTN]);
             }
             return false; // Skip all further processing of this key)
-        case KC_MCTL:
-            /* Mission Control */
-            host_consumer_send(record->event.pressed ? 0x29F : 0);
-            return false; // Skip all further processing of this key
-        case KC_LNPD:
-            /* Lanuchpad */
-            host_consumer_send(record->event.pressed ? 0x2A0 : 0);
-            return false; // Skip all further processing of this key
         case KC_TASK:
         case KC_FILE:
         case KC_SNAP:
@@ -192,8 +184,8 @@ void matrix_scan_kb(void) {
 #ifdef KC_BLUETOOTH_ENABLE
 static void ckbt51_param_init(void) {
     /* Set bluetooth device name */
-    // ckbt51_set_local_name(STR(PRODUCT));
     ckbt51_set_local_name(STR(PRODUCT));
+    //ckbt51_set_local_name(PRODUCT);
     /* Set bluetooth parameters */
     module_param_t param = {.event_mode             = 0x02,
                             .connected_idle_timeout = 7200,
@@ -259,7 +251,7 @@ void battery_calculte_voltage(uint16_t value) {
             for (uint8_t j = 0; j < 192; j++)
                 totalBuf += g_pwm_buffer[i][j];
         /* We assumpt it is linear relationship*/
-        voltage += (30 * totalBuf / DRIVER_LED_TOTAL / 255);
+        voltage += (30 * totalBuf / LED_MATRIX_LED_COUNT / 255);
     }
 #endif
 
