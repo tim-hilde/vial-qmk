@@ -2,11 +2,15 @@
   "name": "Keychron K2 Pro",
   "vendorId": "0x3434",
   "productId": "0x0221",
+  "lighting": "vialrgb",
+  "matrix": {"rows": 6, "cols": 16},
   "customKeycodes": [
     {"name": "Left Option", "title": "Left Option", "shortName": "LOpt"},
     {"name": "Right Option", "title": "Right Option", "shortName": "ROpt"},
     {"name": "Left Cmd", "title": "Left Command", "shortName": "LCmd"},
     {"name": "Right Cmd", "title": "Right Command", "shortName": "RCmd"},
+    {"name": "Misson Control", "title": "Misson Control, availabe in macOS", "shortName": "MCtrl"},
+    {"name": "Launch pad", "title": "Launch pad, availabe in macOS", "shortName": "LPad"},
     {"name": "Task View", "title": "Task View in Windows", "shortName": "Task"},
     {"name": "File Explorer", "title": "File Explorer in Windows", "shortName": "File"},
     {"name": "Screen shot", "title": "Screenshot in macOS", "shortName": "SShot"},
@@ -15,11 +19,8 @@
     {"name": "Bluetooth Host 1", "title": "Bluetooth Host 1", "shortName": "BTH1"},
     {"name": "Bluetooth Host 2", "title": "Bluetooth Host 2", "shortName": "BTH2"},
     {"name": "Bluetooth Host 3", "title": "Bluetooth Host 3", "shortName": "BTH3"},
-    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"},
-    {"name": "Misson Control", "title": "Misson Control, availabe in macOS", "shortName": "MCtrl"},
-    {"name": "Launch pad", "title": "Launch pad, availabe in macOS", "shortName": "LPad"}
+    {"name": "Battery Level", "title": "Show battery level", "shortName": "Batt"}
   ],
-  "matrix": {"rows": 6, "cols": 16},
   "layouts": {
     "keymap": [
       [
